@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="100dp" android:padding="16dp">
+           <RelativeLayout
+               android:layout_width="260dp"
+               android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/visitorName"
+                android:fontFamily="sans-serif-medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:text="Patricio estrella"/>
+            <TextView
+                android:id="@+id/visitorDesc"
+                android:layout_below="@id/visitorName"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:text="Viene en una camioneta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-thin"/>
+
+           </RelativeLayout>
+    <Button
+        android:id="@+id/btnListo"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="Listo"/>
+</RelativeLayout>
