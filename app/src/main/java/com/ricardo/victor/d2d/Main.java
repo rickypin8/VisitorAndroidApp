@@ -1,5 +1,6 @@
 package com.ricardo.victor.d2d;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,8 +15,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.ricardo.victor.data.pojo.Visit;
+
 public class Main extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener,VisitFragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,9 +85,9 @@ public class Main extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_visitantes) {
-            BlankFragment blankFragment=new BlankFragment();
+            VisitFragment  visitFragment=new VisitFragment();
             FragmentTransaction transaction=getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.contenido,blankFragment);
+            transaction.replace(R.id.contenido,visitFragment);
             transaction.commit();
 
         } else if (id == R.id.nav_gallery) {
@@ -102,5 +105,10 @@ public class Main extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 }

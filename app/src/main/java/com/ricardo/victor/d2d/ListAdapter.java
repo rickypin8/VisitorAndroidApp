@@ -13,11 +13,13 @@ import android.app.Activity;
 import android.widget.ImageView;
 import android.graphics.drawable.Drawable;
 
+import com.ricardo.victor.data.pojo.Visit;
+
 public class ListAdapter extends BaseAdapter{
     private Activity activity;
-    private ArrayList<Visitor> data;
+    private ArrayList<Visit> data;
     private static LayoutInflater inflater;
-    public  ListAdapter(Activity activity,ArrayList<Visitor>data){
+    public  ListAdapter(Activity activity,ArrayList<Visit>data){
         this.activity=activity;
         this.data=data;
         inflater=(LayoutInflater)this.activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -37,7 +39,7 @@ public class ListAdapter extends BaseAdapter{
         TextView tvName=(TextView)v.findViewById(R.id.visitorName);
         TextView tvDesc=(TextView)v.findViewById(R.id.visitorDesc);
         //read data item
-        Visitor item=this.data.get(position);
+        Visit item=this.data.get(position);
         //display in controls
         tvName.setText(item.getName());
         tvDesc.setText(item.getDescription());

@@ -1,6 +1,5 @@
 package com.ricardo.victor.d2d;
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -8,21 +7,19 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link BlankFragment.OnFragmentInteractionListener} interface
+ * {@link VisitFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
  */
-public class BlankFragment extends Fragment {
-    ListView lvVisitor;
-    private ProgressDialog pd;
+public class VisitFragment extends Fragment {
+
     private OnFragmentInteractionListener mListener;
 
-    public BlankFragment() {
+    public VisitFragment() {
         // Required empty public constructor
     }
 
@@ -31,8 +28,7 @@ public class BlankFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_blank, container, false);
-
+        return inflater.inflate(R.layout.fragment_visit, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -51,7 +47,6 @@ public class BlankFragment extends Fragment {
             throw new RuntimeException(context.toString()
                     + " must implement OnFragmentInteractionListener");
         }
-
     }
 
     @Override
