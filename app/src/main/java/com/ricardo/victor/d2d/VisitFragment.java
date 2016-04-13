@@ -46,7 +46,7 @@ public class VisitFragment extends Fragment {
         // Inflate the layout for this fragment
         final View view= inflater.inflate(R.layout.fragment_visit, container, false);
         Retrofit retrofit=new Retrofit.Builder()
-                .baseUrl("http://192.168.1.74:8080")
+                .baseUrl("http://172.16.11.250:8080")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         GuardService service=retrofit.create(GuardService.class);
